@@ -25,7 +25,7 @@ def encode(image_name, secret_data):
     print('[*] Encoding data...')
 
     # Add stopping delimiter
-    secret_data += 'cru4g'
+    secret_data += b'cru4g'
     data_index = 0
 
     # Covert data to binary
@@ -75,7 +75,7 @@ def decode(image_name):
     decoded_data = ''
     for byte in all_bytes:
         decoded_data += chr(int(byte, 2))
-        if decoded_data[-5:] == 'cru4g':
+        if decoded_data[-5:] == b'cru4g':
             break
     
     return decoded_data[:-5]

@@ -1,7 +1,11 @@
 import random
 import time
 
-x = 5
-if x > 3:
-    time.sleep(random.randint(1,7))
-    print("yes")
+x = 6
+def check():
+    if x < 10:
+        time.sleep(random.randint(1,7))
+        print("yes")
+
+if __name__ == '__main__':
+    check()
